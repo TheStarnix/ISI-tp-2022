@@ -43,23 +43,18 @@
                 <h1 class="title_details" id="about_me"><span class="material-icons" style="font-size:40px;">find_in_page</span><span class="highlight" style="--hleft: 43%;--hright: 43%;--hcolor: #95a5a6;">REQUÊTES</span></h1>
                 <form class="formulairePourBDProf">
                     <div id="requests_form">
-                        <div class="requests_form_child">
-                            <label for="req1">Quelle requête souhaitez-vous faire?</label>
-                            <select list="requests" name="requeteList" id="requeteList">
-                                <option value="SELECT * FROM products">Tout sélectionner</option>
-                                <option value="SELECT name FROM products">Sélectionner tous les noms</option>
-                                <option value="SELECT name, description FROM products">Sélectionner tous les noms et les descriptions</option>
-                                <option value="SELECT name FROM products WHERE price > 250">Sélectionner tous les noms de produits avec un prix > 250</option>
-                                <option value="SELECT name, modified FROM products ORDER BY modified DESC LIMIT 2">Sélectionner les deux produits ayant été modifié récemment</option>
-                            </select>
-                        </div>
-                        <div class="requests_form_child">
-                            <label for="fname">Requête manuelle:</label>
-                            <input type="text" name="requete" id="requete" size="60">
-                        </div>
-                        <div class="requests_form_child">
-                            <input type="submit" value="Soumettre" id="submit">
-                        </div>
+                        <h2>Quelle requête souhaitez-vous faire?</h2>
+                        <select list="requests" name="requeteList" id="requeteList">
+                            <option value="SELECT * FROM products">Tout sélectionner</option>
+                            <option value="SELECT name FROM products">Sélectionner tous les noms</option>
+                            <option value="SELECT name, description FROM products">Sélectionner tous les noms et les descriptions</option>
+                            <option value="SELECT name FROM products WHERE price > 250">Sélectionner tous les noms de produits avec un prix > 250</option>
+                            <option value="SELECT name, modified FROM products ORDER BY modified DESC LIMIT 2">Sélectionner les deux produits ayant été modifié récemment</option>
+                        </select>
+                        <h2>Requête manuelle:</h2>
+                        <p><i>Cette entrée s'actualisera automatiquement en fonction de la liste déroulante</i></p>
+                        <input type="text" name="requete" id="requete" size="60">
+                        <input type="submit" value="Soumettre" id="submit">
                     </div>
                 </form>
                 <section class="affichageBD"><table></table></section>

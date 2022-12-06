@@ -6,6 +6,7 @@ body, html{
   height: 100%;
   position: relative;
   overflow: auto;
+  font-family: 'Raleway', serif;
 }
 
 /*************************** NAVBAR ***************************/
@@ -64,19 +65,21 @@ body, html{
   }
 }
 /*************************** FORM ***************************/
-#requetes {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 #requests_form {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
 }
 
-.requests_form_child {
-  padding: 0.5em;
+#requests_form * {
+  margin: 0.5em;
+}
+#requests_form h2 {
+  text-decoration: underline;
+  font-size: 20px;
+  border: 1px solid rgb(164, 163, 163);
+  padding: 5px;
+  border-radius: 5px;
 }
 /*************************** PAGE ***************************/
 .presentation-title {
@@ -107,8 +110,6 @@ body, html{
 
 p {
   text-align: center;
-  width: 100%;
-  font-family: 'Raleway', serif;
 }
 
 section {
