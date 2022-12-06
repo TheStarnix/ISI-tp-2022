@@ -157,6 +157,7 @@ function afficherResultatsRequete(enregistrements) {
     );
     // Insérer la balise <tbody> dans la balise <table>
     table.append(tbody);
+    successSubmit()
 
 } // fin de afficherResultatsRequete
 
@@ -167,4 +168,5 @@ function afficherErreur(texteErreur) {
     console.log("Il y a une erreur d'exécution :");
     console.log("\t" + texteErreur);
     document.querySelector('.affichageDesErreurs').append(paragraphe);
+    failSubmit(texteErreur)
 }
