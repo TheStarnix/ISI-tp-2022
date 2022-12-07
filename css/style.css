@@ -67,6 +67,14 @@ body, html{
     width: 100%;
   }
 }
+.presentation-title {
+  display: table-cell;
+  font-family: 'Dancing Script', serif;
+  font-size: 50px;
+  text-align: center;
+  vertical-align: middle;
+  color: #ecf0f1;
+}
 /*************************** FORM ***************************/
 #requests_form {
   display: flex;
@@ -85,14 +93,7 @@ body, html{
   border-radius: 5px;
 }
 /*************************** PAGE ***************************/
-.presentation-title {
-  display: table-cell;
-  font-family: 'Dancing Script', serif;
-  font-size: 50px;
-  text-align: center;
-  vertical-align: middle;
-  color: #ecf0f1;
-}
+
 .title_details:hover {
   text-decoration: underline;
 }
@@ -120,6 +121,11 @@ p {
 
 section {
   padding: 1%;
+}
+
+/*************************** TABLEAU ***************************/
+td, tr {
+  border: 1px solid #000000;
 }
 
 

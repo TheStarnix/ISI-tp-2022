@@ -1,0 +1,90 @@
+<!DOCTYPE html> 
+<html lang="en">
+
+<head>
+    <title>Home - ISI TP</title>
+    <meta charset="utf-8">
+
+    <!-- GOOGLE FONTS AND ICONS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/loading_animation.css">
+
+    <!-- JS -->
+    <script src="js/new_gestionFormulaire.js" defer></script>
+    <script src="js/formulaireSelection.js" defer></script>
+    <script src="js/loading.js" defer></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<header>
+    <!-- NAVBAR -->
+    <nav id="navbar">
+        <ul>
+            <h1>ISI - 2022</h1>
+            <a href="#details">Description</a>
+            <a href="#requetes">Requêtes</a>
+        </ul>
+    </nav>
+</header>
+
+<body>
+
+    <div class="loader-container"></div> <!-- LOADING ANIMATION -->
+    <div id="container"> <!-- BACKGROUND WELCOME -->
+        <h1 class="presentation-title">AUDURIER Théo et CORREIA--PELTIER Clément</h1>
+    </div>
+    
+    <!-- DETAILS ABOUT THE PROJECT -->
+    <div id="details">
+        <h1 class="title_details"><i class="material-icons" style="font-size:40px;">account_circle</i><span class="highlight" style="--hleft: 43%;--hright: 43%;--hcolor: #95a5a6;">DETAILS DU PROJET</span></h1>
+        <p>Dans ce projet, nous devions créer en binôme une page HTML qui serait reliée à un script javascript.</p>
+        <p>Le script permet de sonder la base de donnée et ainsi, afficher les résultats à partir de la page HTML que nous avons créé.</p>
+    </div>
+    
+    <!-- FORM, ENTRIES AND RESULTS -->
+    <div id="requetes">
+        <h1 class="title_details"><span class="material-icons" style="font-size:40px;">find_in_page</span><span class="highlight" style="--hleft: 43%;--hright: 43%;--hcolor: #95a5a6;">REQUÊTES</span></h1>
+        <!-- FORM -->
+        <form class="formulairePourBDProf">
+            <!-- requests_form for FlexBox -->
+            <div id="requests_form">
+                <h2>Quelle requête souhaitez-vous faire?</h2>
+                <!-- Select list -->
+                <select list="requests" name="requeteList" id="requeteList">
+                    <option value="SELECT * FROM products">Tout sélectionner</option>
+                    <option value="SELECT name FROM products">Sélectionner tous les noms</option>
+                    <option value="SELECT name, description FROM products">Sélectionner tous les noms et les descriptions</option>
+                    <option value="SELECT name FROM products WHERE price > 250">Sélectionner tous les noms de produits avec un prix > 250</option>
+                    <option value="SELECT name, modified FROM products ORDER BY modified DESC LIMIT 2">Sélectionner les deux produits ayant été modifié récemment</option>
+                </select>
+                <h2>Requête manuelle:</h2>
+                <p><i>Cette entrée s'actualisera automatiquement en fonction de la liste déroulante</i></p>
+                <!-- Text Entry-->
+                <input type="text" name="requete" id="requete" size="60">
+                <!-- Submit -->
+                <input type="submit" value="Soumettre" id="submit">
+            </div>
+        </form>
+        <!-- RESULTS -->
+        <section class="affichageBD"><table></table></section>
+        <!-- ERRORS -->
+        <section class="affichageDesErreurs">
+            <h1 class="title_details" id="about_me"><span class="material-icons" style="font-size:40px;">report_problem</span><span class="highlight" style="--hleft: 43%;--hright: 43%;--hcolor: #95a5a6;">ERREURS</span></h1>
+        </section>
+    </div>
+
+</body>
+<!-- FOOTER -->
+<footer>
+    <p>© 2022 - Theo AUDURIER et CORREIA--PELTIER Clément, tous droits réservés.</p>
+</footer>
+
+</html>
