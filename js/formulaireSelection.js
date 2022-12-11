@@ -1,5 +1,6 @@
 var requeteList = document.getElementById("requeteList");
 var textEntry = document.getElementById("requete");
+
 var list_titlesuccess = ["Elementary my Dear Watson !", "Gotcha !", "Fantastic !", "Woooosh"]
 var list_titlefail = ["You're not hurt, Watson?", "Oh no !", "Oh dear !", "Oh my !"]
 

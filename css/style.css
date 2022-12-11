@@ -144,3 +144,16 @@ footer {
   font-size: 14px;
 }
 
+/*************************** RICKROLLED ***************************/
+#rickroll_p:hover {
+  text-decoration: underline;
+  color: red;
+  font-size:large;
+  content: none;
+}
+#rickroll_p:hover:after {
+  content:" CLICK CLICK CLICK ";
+}
+#rickroll_p:hover:before {
+  content:" CLICK CLICK CLICK ";
+}
